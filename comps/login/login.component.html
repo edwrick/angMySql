@@ -1,0 +1,22 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form>
+          <p>Inicio de sesion</p>
+          <mat-form-field class="full-width-input">
+            <input matInput placeholder="Usuario" [(ngModel)]="datos.user" name="usuario" id="usuario" required>
+            <mat-error *ngIf="user==''">
+              Ingresar usuario
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input">
+            <input matInput type="password" placeholder="Contraseña" [(ngModel)]="datos.psqd" name="contra" required>
+            <mat-error *ngIf="pswd==''">
+              Ingresar contraseña
+            </mat-error>
+          </mat-form-field>
+          <button type="button" class="btn btn-outline-primary"  (click)="login()">Ingresar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
